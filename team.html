@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team and Communication - Retail POS Migration Project (Group 02)</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+	<h1>Retail POS Migration Project</h1>
+	<p>Group 02 &ndash; BISY2004 Project Management, Assessment 2</p>
+	<div id="nav">
+		<a href="index.html">Home</a>
+		<a href="charter.html">Charter</a>
+		<a href="scope.html">Scope &amp; WBS</a>
+		<a href="schedule.html">Schedule &amp; Cost</a>
+		<a href="risk.html">Risk</a>
+		<a href="quality.html">Quality &amp; Change</a>
+		<a class="current" href="team.html">Team</a>
+		<a href="monitoring.html">Monitoring</a>
+		<a href="recommendation.html">Recommendation</a>
+	</div>
+</div>
+
+<h2 class="pagetitle">7. Team and Communication</h2>
+
+<h3>Team structure and responsibilities</h3>
+
+<div class="tablewrap">
+<table>
+	<tr><th>Member</th><th>Project role</th><th>Primary phase</th><th>Work packages</th><th>Tasks</th></tr>
+	<tr>
+		<td>Saimoon Hasan</td><td>Project Manager</td>
+		<td>Governance and project closure</td><td>1.1, 5.2, M2, M5</td><td class="c">4</td>
+	</tr>
+	<tr>
+		<td>Farhan Rohan</td><td>POS Cloud Specialist</td>
+		<td>Data migration and cloud infrastructure</td><td>1.2, 2.1, 2.2, 3.2, 3.3, 5.1, M4</td><td class="c">7</td>
+	</tr>
+	<tr>
+		<td>Zareen Orpa</td><td>Network and Hardware Engineer</td>
+		<td>Hardware setup and network security</td><td>1.3, 2.3, 3.1, M1, M4</td><td class="c">5</td>
+	</tr>
+	<tr>
+		<td>Ishita</td><td>Operations and Training Lead</td>
+		<td>Staff training and operational shift testing</td><td>3.3, 4.1, 4.2, 5.1, M3</td><td class="c">5</td>
+	</tr>
+</table>
+</div>
+
+<h3>Responsibility assignment (RACI)</h3>
+
+<div class="tablewrap">
+<table>
+	<tr>
+		<th>Phase</th><th>Saimoon<br>(PM)</th><th>Farhan<br>(Cloud)</th><th>Zareen<br>(Hardware)</th>
+		<th>Ishita<br>(Operations)</th><th>Retail Ops<br>Manager</th>
+	</tr>
+	<tr><td>1. Governance &amp; Procurement</td><td class="c">A / R</td><td class="c">R</td><td class="c">R</td><td class="c">I</td><td class="c">C</td></tr>
+	<tr><td>2. Data &amp; Infrastructure</td><td class="c">A</td><td class="c">R</td><td class="c">R</td><td class="c">I</td><td class="c">I</td></tr>
+	<tr><td>3. Implementation &amp; UAT</td><td class="c">A</td><td class="c">R</td><td class="c">R</td><td class="c">C / R</td><td class="c">C</td></tr>
+	<tr><td>4. Training &amp; Operations</td><td class="c">A</td><td class="c">C</td><td class="c">I</td><td class="c">R</td><td class="c">C</td></tr>
+	<tr><td>5. Support &amp; Closure</td><td class="c">A / R</td><td class="c">R</td><td class="c">I</td><td class="c">R</td><td class="c">C</td></tr>
+	<caption>R = responsible (does the work), A = accountable (owns the outcome, one per phase),
+	C = consulted before the decision, I = informed after it.</caption>
+</table>
+</div>
+
+<p>Accountability never splits: the Project Manager is the single A on every phase, while responsibility
+moves with the technical work. Phase 3 is the only phase with three responsible parties, which matches it
+being the busiest stretch of the <a href="schedule.html">critical path</a> and the phase where UAT
+deliberately puts a second pair of eyes (Operations) on the specialist's work.</p>
+
+<p>The allocation table also exposes a structural weakness. The Cloud Specialist holds 7 of the 21
+assignments and 128 of the 368 scheduled hours. That was workable across five stores with one cutover, but
+it would not scale to a national rollout, so cross-training the cloud and hardware roles is carried into
+the <a href="recommendation.html">closing recommendations</a>.</p>
+
+<h3>Communication plan</h3>
+
+<div class="tablewrap">
+<table>
+	<tr><th>Communication</th><th>Audience</th><th>Frequency</th><th>Channel</th><th>Owner</th></tr>
+	<tr><td>Stand-up (15 minutes)</td><td>Core project team</td><td>Daily</td><td>Video call, board reviewed live</td><td>Saimoon Hasan</td></tr>
+	<tr><td>Progress and status report</td><td>Retail Operations Manager</td><td>Weekly</td><td>Email with board link and variance summary</td><td>Saimoon Hasan</td></tr>
+	<tr><td>Executive briefing</td><td>Executive Steering Committee</td><td>Bi-weekly</td><td>Summary pack: budget, milestones, risk exposure</td><td>Saimoon Hasan</td></tr>
+	<tr><td>Store readiness bulletin</td><td>Pilot store managers and cashiers</td><td>Weekly in Phase 4, daily in week one of hypercare</td><td>Store noticeboard and email</td><td>Ishita</td></tr>
+	<tr><td>Vendor sync call</td><td>NexisPOS and Apex suppliers</td><td>Weekly</td><td>Scheduled call, actions logged to Trello</td><td>Farhan and Zareen</td></tr>
+	<tr><td>Retrospective</td><td>Core project team</td><td>Weekly</td><td>Board review and issue log update</td><td>Ishita</td></tr>
+</table>
+</div>
+
+<p>The frequencies are set by the <a href="charter.html">power-interest analysis</a> rather than by
+preference. Manage-closely stakeholders get daily contact. Keep-satisfied stakeholders get a bi-weekly
+summary, because they need assurance on budget and milestones, not detail. Keep-informed store staff get a
+weekly bulletin that steps up to daily floor support at go-live, which is the practical answer to risk
+<a href="risk.html">R2</a>.</p>
+
+<h3>Work performance information</h3>
+<ul>
+	<li><b>Trello board</b> &ndash; card movement by list gives work in progress and completion counts per
+		phase.</li>
+	<li><b>ProjectLibre</b> &ndash; task completion against the schedule, dependency slippage and resource
+		work hours.</li>
+	<li><b>Excel workbook</b> &ndash; task status register, budget drawdown by category, and the variance
+		figures reported each week.</li>
+</ul>
+
+<div id="footer">
+	&copy; 2026 Group 02 Retail POS Migration Project | BISY2004 Project Management
+</div>
+
+</div>
+</body>
+</html>

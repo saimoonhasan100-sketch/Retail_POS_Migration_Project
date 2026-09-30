@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integrated Recommendation - Retail POS Migration Project (Group 02)</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+	<h1>Retail POS Migration Project</h1>
+	<p>Group 02 &ndash; BISY2004 Project Management, Assessment 2</p>
+	<div id="nav">
+		<a href="index.html">Home</a>
+		<a href="charter.html">Charter</a>
+		<a href="scope.html">Scope &amp; WBS</a>
+		<a href="schedule.html">Schedule &amp; Cost</a>
+		<a href="risk.html">Risk</a>
+		<a href="quality.html">Quality &amp; Change</a>
+		<a href="team.html">Team</a>
+		<a href="monitoring.html">Monitoring</a>
+		<a class="current" href="recommendation.html">Recommendation</a>
+	</div>
+</div>
+
+<h2 class="pagetitle">9. Integrated Recommendation</h2>
+
+<h3>Overall judgement</h3>
+<p>The five-store pilot is complete and technically validated, and the group recommends proceeding to
+enterprise rollout, subject to the open items below being settled first.</p>
+
+<p>The evidence for that judgement is consistent across the artefacts rather than resting on one of them.
+All 13 work packages and five milestones closed on their baseline dates, giving a schedule variance of
+zero. Every quality target was met and UAT was signed off in full at milestone M2. All six registered
+risks were closed with funded responses, and the one that materialised during execution was absorbed
+inside the contingency without moving the critical path. Spend stayed inside the approved $106,986 with
+contingency remaining. On the benefit side, checkout is 35% faster and inventory now synchronises in real
+time, which is what the project was authorised to achieve.</p>
+
+<p>The pilot is not, however, a proof that the platform scales. Everything above describes five stores,
+one cutover and one specialist carrying a third of the work. That distinction is what the next steps are
+built around.</p>
+
+<h3>Major unresolved issues</h3>
+
+<div class="tablewrap">
+<table>
+	<tr><th>Open item</th><th>Why it matters</th><th>Owner</th></tr>
+	<tr>
+		<td>Long-term service level agreement with NexisPOS is not signed</td>
+		<td>The pilot ran on a one-year licence with no contracted response times. At enterprise scale, an
+			outage without an SLA behind it is an unpriced trading risk</td>
+		<td>Saimoon Hasan</td>
+	</tr>
+	<tr>
+		<td>Enterprise licence and hardware pricing not yet quoted</td>
+		<td>Hardware and licensing consumed 63% of the pilot budget. Rollout funding cannot be approved
+			until per-store pricing at volume is known</td>
+		<td>Farhan Rohan</td>
+	</tr>
+	<tr>
+		<td>Hypercare beyond two weeks is unfunded (CR-03 deferred)</td>
+		<td>The Retail Operations Manager asked for four weeks of support. The request was deferred to
+			protect the pilot deadline and still needs a funding decision</td>
+		<td>Retail Operations Manager</td>
+	</tr>
+	<tr>
+		<td>Single-point resource dependency on the cloud specialist role</td>
+		<td>One role carried 35% of scheduled hours. Repeating that structure across many stores would make
+			the rollout schedule fragile</td>
+		<td>Saimoon Hasan</td>
+	</tr>
+</table>
+</div>
+
+<h3>How the artefacts connect</h3>
+<p>The recommendation above depends on the artefacts agreeing with each other. They connect as follows:</p>
+
+<ul>
+	<li><b>WBS to schedule.</b> Work packages 1.1 to 5.2 appear as the linked task bars in the ProjectLibre
+		Gantt, so every deliverable carries a date, a duration and a dependency.</li>
+	<li><b>Schedule to Trello.</b> Each scheduled activity exists as a card titled with its WBS identifier,
+		so daily board movement reports against the baseline instead of against opinion.</li>
+	<li><b>Stakeholders to risk.</b> Cashiers sit in the high-interest, low-power quadrant, which is the
+		profile for adoption resistance. That is why R2 exists and why its response is rehearsal rather than
+		notification.</li>
+	<li><b>Risk to cost.</b> The response to R1 was funded in CAT-03 at planning time and topped up from the
+		CAT-05 contingency through CR-02 during execution.</li>
+	<li><b>Risk to issue to action.</b> R1 materialised as ISS-02, latency at two stores. Because the
+		response was pre-funded, the correction was a purchase inside contingency and the critical path never
+		moved.</li>
+	<li><b>Change to quality.</b> CR-01's hardware substitution created a re-test obligation, which surfaced
+		as ISS-01 during UAT and was closed before the M2 sign-off gate.</li>
+	<li><b>Status to closure.</b> The Excel status register is the source of the zero schedule variance
+		reported at closure and of the benefits claimed against the original business problem.</li>
+</ul>
+
+<h3>Recommended next steps</h3>
+
+<div class="tablewrap">
+<table>
+	<tr><th>#</th><th>Recommendation</th><th>Detail</th><th>Timing</th></tr>
+	<tr>
+		<td class="c">1</td><td>Hypercare support</td>
+		<td>Two weeks of intensive floor support for pilot store staff, with the CR-03 extension decision
+			taken on week-one defect volume rather than in advance</td>
+		<td>Immediately after go-live</td>
+	</tr>
+	<tr>
+		<td class="c">2</td><td>Enterprise scaling</td>
+		<td>Roll out NexisPOS Cloud and Apex hardware to the remaining stores in waves, carrying two to
+			three days of float per wave and cross-trained cloud and hardware roles</td>
+		<td>Q4 2026 to Q1 2027</td>
+	</tr>
+	<tr>
+		<td class="c">3</td><td>Vendor optimisation</td>
+		<td>Finalise long-term service level agreements and volume pricing with NexisPOS and Apex before the
+			rollout budget is submitted for approval</td>
+		<td>Ongoing</td>
+	</tr>
+</table>
+</div>
+
+<h3>References</h3>
+<p class="small">Atlassian. (2026). <i>Trello</i> [Computer software].
+<a href="https://trello.com/">https://trello.com/</a></p>
+
+<p class="small">JGraph Ltd. (2026). <i>diagrams.net</i> [Computer software].
+<a href="https://www.diagrams.net/">https://www.diagrams.net/</a></p>
+
+<p class="small">Microsoft. (2026). <i>Microsoft Excel</i> [Computer software].
+<a href="https://www.microsoft.com/microsoft-365/excel">https://www.microsoft.com/microsoft-365/excel</a></p>
+
+<p class="small">Project Management Institute. (2021). <i>A guide to the project management body of
+knowledge (PMBOK guide)</i> (7th ed.). Project Management Institute.</p>
+
+<p class="small">ProjectLibre. (2026). <i>ProjectLibre desktop</i> [Computer software].
+<a href="https://www.projectlibre.com/">https://www.projectlibre.com/</a></p>
+
+<div id="footer">
+	&copy; 2026 Group 02 Retail POS Migration Project | BISY2004 Project Management
+</div>
+
+</div>
+</body>
+</html>

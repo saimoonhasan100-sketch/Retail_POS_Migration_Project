@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quality, Change and Delivery - Retail POS Migration Project (Group 02)</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+	<h1>Retail POS Migration Project</h1>
+	<p>Group 02 &ndash; BISY2004 Project Management, Assessment 2</p>
+	<div id="nav">
+		<a href="index.html">Home</a>
+		<a href="charter.html">Charter</a>
+		<a href="scope.html">Scope &amp; WBS</a>
+		<a href="schedule.html">Schedule &amp; Cost</a>
+		<a href="risk.html">Risk</a>
+		<a class="current" href="quality.html">Quality &amp; Change</a>
+		<a href="team.html">Team</a>
+		<a href="monitoring.html">Monitoring</a>
+		<a href="recommendation.html">Recommendation</a>
+	</div>
+</div>
+
+<h2 class="pagetitle">6. Quality, Change and Delivery</h2>
+
+<h3>Quality requirements and metrics</h3>
+
+<div class="tablewrap">
+<table>
+	<tr><th>Requirement</th><th>Target</th><th>How it was measured</th><th>Result</th></tr>
+	<tr>
+		<td>System availability</td><td>99.9% uptime</td>
+		<td>NexisPOS server logs across the hypercare window (WP 5.1)</td><td>Met</td>
+	</tr>
+	<tr>
+		<td>Checkout transaction speed</td><td>Under 2 seconds</td>
+		<td>Timed transactions during user acceptance testing (WP 3.3)</td><td>Met</td>
+	</tr>
+	<tr>
+		<td>Data integrity</td><td>100% record match, zero loss</td>
+		<td>Dual-audit reconciliation before and after cutover (WP 2.1, 3.2)</td><td>Met</td>
+	</tr>
+	<tr>
+		<td>User acceptance</td><td>All test cases passed</td>
+		<td>UAT results signed off at milestone M2</td><td>Met</td>
+	</tr>
+	<tr>
+		<td>Staff readiness</td><td>All pilot-store cashiers certified</td>
+		<td>Certification at milestone M3, after dry-runs (WP 4.2)</td><td>Met</td>
+	</tr>
+</table>
+</div>
+
+<p>Each metric answers one of the failures that justified the project in the first place. Uptime and
+transaction speed address the slow, unreliable legacy terminals; data integrity addresses the overnight
+syncing failures; staff certification addresses the operational risk of switching platform during a
+trading period. Every metric is verified by a specific work package, so none of them rests on an
+opinion at the end of the project.</p>
+
+<h3>Change log</h3>
+
+<div class="tablewrap">
+<table>
+	<tr><th>CR</th><th>Request</th><th>Raised by</th><th>Impact assessment</th><th>Decision</th></tr>
+	<tr>
+		<td>CR-01</td>
+		<td>Substitute an alternative Apex terminal model for 3 of the 15 units after a supply shortfall</td>
+		<td>Apex supplier</td>
+		<td>Equivalent specification, no change to the CAT-01 total and no movement of M1, but the receipt
+			printer driver must be re-tested in UAT</td>
+		<td>Approved</td>
+	</tr>
+	<tr>
+		<td>CR-02</td>
+		<td>Add LTE backup gateways at two stores after latency appeared on cloud sync</td>
+		<td>Zareen Orpa</td>
+		<td>Funded from the CAT-05 contingency. No schedule impact, as installation runs alongside training.
+			Directly reduces exposure to risk R1</td>
+		<td>Approved</td>
+	</tr>
+	<tr>
+		<td>CR-03</td>
+		<td>Extend hypercare support from two weeks to four weeks</td>
+		<td>Retail Operations Manager</td>
+		<td>Adds duration to WP 5.1, which sits on the zero-float critical path, so it moves closure past
+			25 September. Cost also falls outside the CAT-04 allocation</td>
+		<td>Deferred</td>
+	</tr>
+</table>
+</div>
+
+<p>The decision rule can be read straight off the table. CR-01 and CR-02 were approved because neither
+added duration to a critical activity and both stayed inside the approved budget. CR-03 was refused for
+the opposite reason: extending hypercare would have moved the closure milestone on a path with no float
+to absorb it. It was written into the enterprise rollout proposal rather than quietly absorbed, which is
+the practical difference between change control and scope creep.</p>
+
+<h3>Trello delivery workflow</h3>
+
+<figure>
+	<a href="assets/trello/01_Trello_Kanban_Board.png">
+		<img src="assets/trello/01_Trello_Kanban_Board.png"
+			alt="Trello board for Retail POS Migration Group 02 with Backlog, To Do, In Progress, Review/Testing and Done lists">
+	</a>
+	<figcaption><b>Figure 6.1:</b> The project board in Trello. Five lists &ndash; Backlog, To Do,
+	In Progress, Review / Testing and Done &ndash; with every card titled by its WBS identifier and
+	colour-labelled by phase.</figcaption>
+</figure>
+
+<div class="tablewrap">
+<table>
+	<tr><th>List</th><th>What it holds</th><th>Exit condition</th></tr>
+	<tr><td>Backlog</td><td>Work not yet released, deferred change requests, upcoming milestones</td><td>Scheduled and assigned to an owner</td></tr>
+	<tr><td>To Do</td><td>Work released for the current phase</td><td>Owner starts the task</td></tr>
+	<tr><td>In Progress</td><td>Configuration, wiring and database scripting under way</td><td>Work complete and ready to check</td></tr>
+	<tr><td>Review / Testing</td><td>Stability checks, speed checks, hardware connectivity, UAT execution</td><td>Acceptance criteria met, or returned to In Progress</td></tr>
+	<tr><td>Done</td><td>Accepted deliverables and signed-off milestones</td><td>&ndash;</td></tr>
+</table>
+</div>
+
+<figure>
+	<a href="assets/trello/02_Trello_Card_Detail_redacted.png">
+		<img src="assets/trello/02_Trello_Card_Detail_redacted.png"
+			alt="Trello card detail for milestone M4 showing assigned leads, WBS reference, due date and objective">
+	</a>
+	<figcaption><b>Figure 6.2:</b> Card detail for milestone M4. Each card records the assigned leads, a WBS
+	reference, the phase, a due date and a milestone acceptance checklist. Student identifiers have been
+	removed from this screenshot before publication.</figcaption>
+</figure>
+
+<p>Card titles reuse the WBS identifiers, so &ldquo;3.1 On-site Apex POS Terminal Setup &amp; Wiring&rdquo;
+on the board is the same activity as task 3.1 in the <a href="schedule.html">ProjectLibre schedule</a> and
+row 3.1 of the <a href="scope.html">WBS register</a>. A card without a scheduled parent activity does not
+get created, which is how informal work is kept out of the project.</p>
+
+<p>Review / Testing exists as a separate list on purpose. Without it, a card moves from In Progress
+straight to Done on the word of the person who did the work. With it, a defect found during UAT sends the
+card backwards rather than closing it &ndash; which is exactly what happened to the receipt printer issue
+recorded as ISS-01 on the <a href="monitoring.html">issue log</a>. Milestone cards carry a further
+condition: M2 could not close until both the Cloud Specialist and the Project Manager had signed off.</p>
+
+<h3>Delivery controls</h3>
+<ul>
+	<li>Milestone gates: M1 to M5 each require a named approver before the next phase starts.</li>
+	<li>Cloud monitoring: uptime and sync latency tracked from the NexisPOS server logs during hypercare.</li>
+	<li>Weekly retrospective: board reviewed against the schedule, with blockers written into the issue log.</li>
+	<li>Change gate: no change adding duration to a zero-float critical activity is approved inside the
+		execution window.</li>
+</ul>
+
+<div id="footer">
+	&copy; 2026 Group 02 Retail POS Migration Project | BISY2004 Project Management
+</div>
+
+</div>
+</body>
+</html>

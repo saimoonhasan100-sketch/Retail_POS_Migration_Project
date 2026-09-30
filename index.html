@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home - Retail POS Migration Project (Group 02)</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+	<h1>Retail POS Migration Project</h1>
+	<p>Group 02 &ndash; BISY2004 Project Management, Assessment 2</p>
+	<div id="nav">
+		<a class="current" href="index.html">Home</a>
+		<a href="charter.html">Charter</a>
+		<a href="scope.html">Scope &amp; WBS</a>
+		<a href="schedule.html">Schedule &amp; Cost</a>
+		<a href="risk.html">Risk</a>
+		<a href="quality.html">Quality &amp; Change</a>
+		<a href="team.html">Team</a>
+		<a href="monitoring.html">Monitoring</a>
+		<a href="recommendation.html">Recommendation</a>
+	</div>
+</div>
+
+<h2 class="pagetitle">1. Project Overview</h2>
+
+<h3>The business problem</h3>
+<p>A national retail chain is running outdated point-of-sale systems in five pilot stores. The legacy
+terminals sync to head office overnight instead of in real time, so inventory figures are a day old,
+checkout is slow at peak hours, and store managers reconcile takings by hand at the end of every shift.
+With a major trading period approaching, the chain needed the pilot stores moved onto a cloud platform
+before the peak, not after it.</p>
+
+<h3>Project purpose</h3>
+<p>To migrate five pilot retail stores from legacy infrastructure to the NexisPOS cloud platform running
+on Apex POS TouchTerminals, delivering real-time inventory synchronisation and faster checkout inside an
+approved budget of $106,986 and a fixed deadline of 25 September 2026.</p>
+
+<h3>Development approach</h3>
+<p>The project used a hybrid life cycle. Governance, procurement and infrastructure work (Phases 1 and 2)
+were planned predictively, because licensing and hardware delivery are fixed-order dependencies that
+cannot be iterated. Implementation, testing and training (Phases 3 and 4) ran in short cycles tracked on
+a Trello board, so a defect found while testing one store could be fixed without re-planning the rest of
+the schedule.</p>
+
+<h3>Key objectives</h3>
+<ol>
+	<li>Complete the 28-day migration execution window and close the project by 25 September 2026.</li>
+	<li>Install Apex hardware and enable NexisPOS cloud synchronisation in all five pilot stores.</li>
+	<li>Migrate legacy transaction data with zero data loss and 100% UAT sign-off.</li>
+	<li>Deliver checkout transactions in under two seconds at 99.9% platform uptime.</li>
+</ol>
+
+<h3>Project details</h3>
+<table class="plain">
+	<tr><td class="label">Scenario</td><td>B &ndash; Retail POS Migration (5-store pilot)</td></tr>
+	<tr><td class="label">Approved budget</td><td>$106,986</td></tr>
+	<tr><td class="label">Project window</td><td>30 July 2026 &ndash; 25 September 2026</td></tr>
+	<tr><td class="label">Execution baseline</td><td>28 August &ndash; 25 September 2026 (28 days)</td></tr>
+	<tr><td class="label">Life cycle</td><td>Hybrid &ndash; predictive planning, iterative delivery</td></tr>
+	<tr><td class="label">Project manager</td><td>Saimoon Hasan</td></tr>
+	<tr><td class="label">Status</td><td>Closed, 25 September 2026</td></tr>
+</table>
+
+<h2>Solution context</h2>
+
+<figure>
+	<a href="assets/diagrams/A2_Group02_POS_Architecture_Diagram.png">
+		<img src="assets/diagrams/A2_Group02_POS_Architecture_Diagram.png"
+			alt="Sequence diagram of a sale passing from the Apex terminal through the store router to the NexisPOS cloud database">
+	</a>
+	<figcaption><b>Figure 1.1:</b> Target POS transaction flow, drawn in diagrams.net. A sale passes from the
+	cashier to the Apex terminal, through the store router (VLAN with LTE backup) and the cloud API gateway,
+	and is written to the NexisPOS cloud database before the receipt prints.</figcaption>
+</figure>
+
+<p>The diagram matters to the plan for one reason: the store router sits in the middle of every
+transaction. If it drops, that store stops syncing, which is why an internet outage is scored as the
+highest risk on the register and why LTE backup was funded as part of the network budget rather than
+treated as an optional extra. The same diagram also shows why data integrity checks belong either side
+of the migration cutover, not just after it.</p>
+
+<h2>Using this website</h2>
+<p>Each section below presents the artefacts produced in ProjectLibre, Trello, Excel and diagrams.net,
+with an explanation of what the artefact shows and the decision that followed from it.</p>
+
+<ol>
+	<li><a href="charter.html">Project charter and stakeholders</a> &ndash; authority, assumptions,
+		constraints and the power-interest analysis.</li>
+	<li><a href="scope.html">Scope and WBS</a> &ndash; scope statement, work breakdown, exclusions and
+		scope control.</li>
+	<li><a href="schedule.html">Schedule, critical path and cost</a> &ndash; Gantt chart, milestones,
+		resource loading and the budget baseline.</li>
+	<li><a href="risk.html">Risk management</a> &ndash; register, 5 &times; 5 scoring, owners and
+		responses.</li>
+	<li><a href="quality.html">Quality, change and delivery</a> &ndash; metrics, change log and the Trello
+		workflow.</li>
+	<li><a href="team.html">Team and communication</a> &ndash; roles, responsibility assignment and the
+		communication plan.</li>
+	<li><a href="monitoring.html">Monitoring, control and closure</a> &ndash; variance, issues, closure and
+		benefits.</li>
+	<li><a href="recommendation.html">Integrated recommendation</a> &ndash; overall judgement, open issues
+		and next steps.</li>
+</ol>
+
+<div id="footer">
+	&copy; 2026 Group 02 Retail POS Migration Project | BISY2004 Project Management
+</div>
+
+</div>
+</body>
+</html>

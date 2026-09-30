@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schedule and Cost - Retail POS Migration Project (Group 02)</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+	<h1>Retail POS Migration Project</h1>
+	<p>Group 02 &ndash; BISY2004 Project Management, Assessment 2</p>
+	<div id="nav">
+		<a href="index.html">Home</a>
+		<a href="charter.html">Charter</a>
+		<a href="scope.html">Scope &amp; WBS</a>
+		<a class="current" href="schedule.html">Schedule &amp; Cost</a>
+		<a href="risk.html">Risk</a>
+		<a href="quality.html">Quality &amp; Change</a>
+		<a href="team.html">Team</a>
+		<a href="monitoring.html">Monitoring</a>
+		<a href="recommendation.html">Recommendation</a>
+	</div>
+</div>
+
+<h2 class="pagetitle">4. Schedule, Critical Path and Cost</h2>
+
+<figure>
+	<a href="assets/projectlibre/01_Gantt_Chart.png">
+		<img src="assets/projectlibre/01_Gantt_Chart.png"
+			alt="ProjectLibre Gantt chart showing five summary phases, linked task bars and milestone diamonds">
+	</a>
+	<figcaption><b>Figure 4.1:</b> Project Gantt chart in ProjectLibre. Twenty-three rows: five summary bars
+	(one per phase), thirteen linked work-package bars with finish-to-start dependencies, resource names
+	against each bar, and milestone diamonds.</figcaption>
+</figure>
+
+<p>The phases overlap only where it is safe for them to overlap. Phase 2 starts before Phase 1 finishes,
+because cloud licensing and store network work do not depend on each other. Everything in Phase 3 is
+chained finish-to-start, so terminal setup cannot begin until the cloud database exists and migration
+cannot begin until the terminals are wired.</p>
+
+<p>The resource names on the bars are worth reading as well as the dates. The POS Cloud Specialist appears
+against five separate bars spread across three phases, which is the heaviest single allocation in the
+project and the reason resource loading is examined further down this page.</p>
+
+<figure>
+	<a href="assets/projectlibre/02_Critical_Path.png">
+		<img src="assets/projectlibre/02_Critical_Path.png"
+			alt="ProjectLibre Gantt filtered to critical tasks only, showing an unbroken chain to the final milestone">
+	</a>
+	<figcaption><b>Figure 4.2:</b> The same schedule with the ProjectLibre <i>Critical tasks</i> filter
+	applied. Every remaining activity is critical and the chain runs unbroken from procurement to
+	closure.</figcaption>
+</figure>
+
+<h3>Critical path</h3>
+<p>1.3 Procurement of Apex Terminals &rarr; M1 Hardware Delivered &rarr; 2.1 Legacy Data Audit &amp;
+Schema Mapping &rarr; 2.2 Cloud Database Provisioning &rarr; 3.1 Terminal Setup &amp; Wiring &rarr;
+3.2 Cloud Sync &amp; Migration &rarr; 3.3 Functional &amp; UAT &rarr; M2 UAT Sign-off &rarr;
+4.1&ndash;4.2 Training &amp; Dry-Runs &rarr; M3 and M4 Go-Live &rarr; 5.1&ndash;5.2 Hypercare &amp;
+Handover &rarr; M5 Closure.</p>
+
+<p><b>Float available: zero.</b> Applying the critical-tasks filter removes nothing from the chart, which
+means there is no non-critical work anywhere in the plan. A one-day slip on any activity moves the
+25 September closure date by one day. That single fact drove three management decisions: buffer stock was
+held against hardware delay, the change gate refused anything that added duration to a critical activity,
+and resource levelling was preferred over overtime.</p>
+
+<h2>Milestones and baseline</h2>
+
+<div class="tablewrap">
+<table>
+	<tr><th>ID</th><th>Milestone</th><th>Owner</th><th>Baseline date</th><th>Status</th></tr>
+	<tr><td>M1</td><td>Apex POS Hardware Delivered &amp; Accepted</td><td>Zareen Orpa</td><td>1 September 2026</td><td>Done</td></tr>
+	<tr><td>M2</td><td>UAT &amp; Data Migration Sign-off</td><td>Farhan &amp; Saimoon</td><td>12 September 2026</td><td>Done</td></tr>
+	<tr><td>M3</td><td>Staff Readiness Certification</td><td>Ishita</td><td>16 September 2026</td><td>Done</td></tr>
+	<tr><td>M4</td><td>Pilot Stores Cloud Migration Go-Live</td><td>Farhan &amp; Zareen</td><td>17 September 2026</td><td>Done</td></tr>
+	<tr><td>M5</td><td>Project Closure Completed</td><td>Saimoon Hasan</td><td>25 September 2026</td><td>Done</td></tr>
+</table>
+</div>
+
+<p class="note">The charter authorises the project window 30 July to 25 September 2026. Within it, the
+28-day execution baseline runs 28 August to 25 September 2026 and is held in the WBS register
+(Figure 3.1); the ProjectLibre file is the working schedule used for dependency and critical-path
+analysis. All 13 work packages and five milestones closed on their baseline dates, giving a schedule
+variance of zero &ndash; see <a href="monitoring.html">monitoring and closure</a>.</p>
+
+<h2>Resource loading</h2>
+
+<figure>
+	<a href="assets/projectlibre/03_Project_Cost_Summary.png">
+		<img src="assets/projectlibre/03_Project_Cost_Summary.png"
+			alt="ProjectLibre resource usage view showing work hours per resource and per assigned task">
+	</a>
+	<figcaption><b>Figure 4.3:</b> Resource usage view in ProjectLibre, showing total work per role broken
+	down by assigned work package and spread across the working calendar.</figcaption>
+</figure>
+
+<div class="tablewrap">
+<table>
+	<tr><th>Resource</th><th>Assigned work packages</th><th>Total work</th></tr>
+	<tr><td>POS Cloud Specialist</td><td>1.2, 2.2, 3.2, 3.3, 5.1</td><td class="r">128 hours</td></tr>
+	<tr><td>Network Infrastructure Engineer</td><td>2.1, 2.3</td><td class="r">72 hours</td></tr>
+	<tr><td>On-site Hardware Technician</td><td>1.3, 3.1</td><td class="r">72 hours</td></tr>
+	<tr><td>Store Lead Trainer</td><td>4.1, 4.2</td><td class="r">56 hours</td></tr>
+	<tr><td>Project Manager</td><td>1.1, 5.2</td><td class="r">40 hours</td></tr>
+	<tr class="total"><td colspan="2">Total scheduled effort</td><td class="r">368 hours</td></tr>
+</table>
+</div>
+
+<p>One role holds 128 of the 368 scheduled hours, or 35% of the project. On a schedule with no float that
+is a delivery risk rather than a workload complaint: if that person is unavailable for two days, the
+finish date moves. Adding people would not have helped during cutover, so the control used was resource
+levelling &ndash; sequencing the cloud specialist's tasks so that no two of them competed for the same
+days &ndash; and cross-training was recorded as a recommendation for the wider rollout.</p>
+
+<h2>Cost</h2>
+
+<div class="tablewrap">
+<table>
+	<tr><th>Code</th><th>Cost category</th><th>Description</th><th>Allocated</th><th>Share</th></tr>
+	<tr><td>CAT-01</td><td>Hardware Procurement</td><td>15 Apex POS TouchTerminals, printers, scanners</td><td class="r">$42,500</td><td class="r">39.7%</td></tr>
+	<tr><td>CAT-02</td><td>Software Licensing</td><td>NexisPOS Enterprise Cloud Licence (one year)</td><td class="r">$24,800</td><td class="r">23.2%</td></tr>
+	<tr><td>CAT-03</td><td>Network &amp; Infrastructure</td><td>VLAN setup, router upgrades, LTE backup</td><td class="r">$14,200</td><td class="r">13.3%</td></tr>
+	<tr><td>CAT-04</td><td>Human Resources &amp; Training</td><td>Staff training modules, consultant fees</td><td class="r">$12,800</td><td class="r">12.0%</td></tr>
+	<tr><td>CAT-05</td><td>Project Contingency</td><td>Risk reserve for unexpected migration delays</td><td class="r">$12,686</td><td class="r">11.9%</td></tr>
+	<tr class="total"><td colspan="3">Total approved budget</td><td class="r">$106,986</td><td class="r">100%</td></tr>
+</table>
+</div>
+
+<figure>
+	<a href="assets/excel/02_Excel_Budget_Summary.png">
+		<img src="assets/excel/02_Excel_Budget_Summary.png"
+			alt="Excel budget breakdown worksheet with five cost categories totalling $106,986">
+	</a>
+	<figcaption><b>Figure 4.4:</b> Budget breakdown worksheet in Excel, showing allocated amounts and
+	percentage shares against the approved total.</figcaption>
+</figure>
+
+<h3>Reading the cost and schedule together</h3>
+<p>Almost two thirds of the budget (63%) is committed to hardware and licensing before a single store goes
+live, and both are procured in Phase 1. Once milestone M1 is accepted that money is spent, which makes any
+late scope change expensive as well as slow. That is the commercial reason behind the change gate
+described under <a href="scope.html">scope control</a>.</p>
+
+<p>The 11.9% contingency was deliberately held rather than spent on extra terminals at the start. It was
+drawn on once, to fund the additional LTE backup gateways raised as change request CR-02 when sync latency
+appeared at two stores. Because the reserve existed, that response stayed inside the approved budget
+instead of becoming a funding request to the Steering Committee, which would have taken longer than the
+schedule allowed.</p>
+
+<p>Finally, the combination of a 28-day window and zero float means overtime is the most likely source of
+a cost overrun on a project like this. Strict resource levelling protected the deadline and the training
+and labour line at the same time.</p>
+
+<div id="footer">
+	&copy; 2026 Group 02 Retail POS Migration Project | BISY2004 Project Management
+</div>
+
+</div>
+</body>
+</html>

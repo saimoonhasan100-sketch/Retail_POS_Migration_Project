@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Risk Management - Retail POS Migration Project (Group 02)</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+	<h1>Retail POS Migration Project</h1>
+	<p>Group 02 &ndash; BISY2004 Project Management, Assessment 2</p>
+	<div id="nav">
+		<a href="index.html">Home</a>
+		<a href="charter.html">Charter</a>
+		<a href="scope.html">Scope &amp; WBS</a>
+		<a href="schedule.html">Schedule &amp; Cost</a>
+		<a class="current" href="risk.html">Risk</a>
+		<a href="quality.html">Quality &amp; Change</a>
+		<a href="team.html">Team</a>
+		<a href="monitoring.html">Monitoring</a>
+		<a href="recommendation.html">Recommendation</a>
+	</div>
+</div>
+
+<h2 class="pagetitle">5. Risk Management</h2>
+
+<h3>Scoring approach</h3>
+<p>Each risk is scored from 1 to 5 for probability and from 1 to 5 for impact, and the two are multiplied
+to give an exposure score out of 25. Impact is judged against the two hardest constraints on this project:
+the 25 September deadline and the $106,986 budget ceiling. A risk scoring 15 or above needs a funded
+response in place before the affected work package starts. A risk scoring 9 to 14 needs a named owner and
+a documented response. Anything below 9 is monitored at the weekly review.</p>
+
+<h3>Risk register</h3>
+
+<div class="tablewrap">
+<table>
+	<tr>
+		<th>ID</th><th>Risk</th><th>Owner</th><th>P</th><th>I</th><th>Score</th>
+		<th>Response</th><th>Status</th>
+	</tr>
+	<tr>
+		<td>R1</td>
+		<td>Internet outage at a pilot store stops cloud synchronisation</td>
+		<td>Zareen Orpa</td><td class="c">3</td><td class="c">5</td><td class="c">15</td>
+		<td>Mitigate. 4G/LTE backup routers at all five stores, funded under CAT-03. Terminals queue
+			transactions locally and re-sync on recovery.</td>
+		<td>Closed</td>
+	</tr>
+	<tr>
+		<td>R2</td>
+		<td>Staff resistance to the new terminals slows checkout after go-live</td>
+		<td>Ishita</td><td class="c">4</td><td class="c">3</td><td class="c">12</td>
+		<td>Mitigate. Dry-run shift simulations (WP 4.2), printed user guides, and floor-walking support
+			during the first week of hypercare.</td>
+		<td>Closed</td>
+	</tr>
+	<tr>
+		<td>R3</td>
+		<td>Apex hardware delivery delay pushes out M1 and the whole critical path</td>
+		<td>Saimoon Hasan</td><td class="c">3</td><td class="c">4</td><td class="c">12</td>
+		<td>Mitigate. Pre-orders placed in Phase 1, buffer stock held for two terminals, weekly vendor
+			sync call.</td>
+		<td>Closed</td>
+	</tr>
+	<tr>
+		<td>R4</td>
+		<td>Legacy data mismatch corrupts transaction or inventory records during migration</td>
+		<td>Farhan Rohan</td><td class="c">2</td><td class="c">5</td><td class="c">10</td>
+		<td>Mitigate. Schema mapping in WP 2.1, then dual-audit verification scripts before and after
+			cutover, with a rollback snapshot retained.</td>
+		<td>Closed</td>
+	</tr>
+	<tr>
+		<td>R5</td>
+		<td>VLAN or firewall misconfiguration exposes payment traffic</td>
+		<td>Zareen Orpa</td><td class="c">2</td><td class="c">4</td><td class="c">8</td>
+		<td>Mitigate. Staged network configuration per store, with a security check completed before any
+			terminal is connected (WP 2.3).</td>
+		<td>Closed</td>
+	</tr>
+	<tr>
+		<td>R6</td>
+		<td>Contingency drawdown exceeds the reserve and breaches the budget ceiling</td>
+		<td>Saimoon Hasan</td><td class="c">2</td><td class="c">3</td><td class="c">6</td>
+		<td>Control. Every drawdown routed through the change log and recorded in the budget sheet, with a
+			weekly variance check against CAT-05.</td>
+		<td>Closed</td>
+	</tr>
+	<caption>P = probability (1&ndash;5), I = impact (1&ndash;5), Score = P &times; I.</caption>
+</table>
+</div>
+
+<h3>Risk heat map</h3>
+
+<p class="small">Impact on the vertical axis, probability on the horizontal axis. Register entries are
+plotted in the cell matching their score.</p>
+
+<table class="heat">
+	<tr>
+		<td class="axis">5</td>
+		<td class="s2"></td><td class="s3">R4</td><td class="s4">R1</td><td class="s5"></td><td class="s5"></td>
+	</tr>
+	<tr>
+		<td class="axis">4</td>
+		<td class="s1"></td><td class="s2">R5</td><td class="s3">R3</td><td class="s4"></td><td class="s5"></td>
+	</tr>
+	<tr>
+		<td class="axis">3</td>
+		<td class="s1"></td><td class="s2">R6</td><td class="s3"></td><td class="s3">R2</td><td class="s4"></td>
+	</tr>
+	<tr>
+		<td class="axis">2</td>
+		<td class="s1"></td><td class="s1"></td><td class="s2"></td><td class="s2"></td><td class="s3"></td>
+	</tr>
+	<tr>
+		<td class="axis">1</td>
+		<td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s2"></td>
+	</tr>
+	<tr>
+		<td class="axis"></td>
+		<td class="axis">1</td><td class="axis">2</td><td class="axis">3</td><td class="axis">4</td><td class="axis">5</td>
+	</tr>
+</table>
+
+<p class="heatkey">Score bands: 1&ndash;4 low, 5&ndash;8 guarded, 9&ndash;14 moderate, 15&ndash;19 high,
+20&ndash;25 critical.</p>
+
+<h3>What the register shows</h3>
+<p>No risk reached the critical band, but the register is weighted by impact rather than probability.
+R1 and R4 both carry an impact of 5, because either a prolonged outage or a corrupted data set would stop
+a live store trading. Both were therefore answered with something physical and funded &ndash; backup
+routers in one case, a retained rollback snapshot in the other &ndash; rather than with monitoring alone.
+Neither response was optional or left until the risk appeared.</p>
+
+<p>R2 is the highest-probability risk on the register, and it comes from a group with no authority over
+the project: the pilot store cashiers, classified low power and high interest on the
+<a href="charter.html">stakeholder map</a>. Risk and stakeholder analysis point at the same people, which
+is why the response is rehearsal and floor support rather than an email, and why the store bulletin steps
+up to daily contact during the first week after go-live.</p>
+
+<p>The link to money runs the other way. R1's response was funded in the network category at planning
+time, then topped up from the contingency through change request CR-02 during execution, when latency
+appeared at two stores. The risk register is therefore not a static document: it is what made that
+mid-project purchase a planned response instead of an emergency.</p>
+
+<div id="footer">
+	&copy; 2026 Group 02 Retail POS Migration Project | BISY2004 Project Management
+</div>
+
+</div>
+</body>
+</html>

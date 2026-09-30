@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monitoring, Control and Closure - Retail POS Migration Project (Group 02)</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+	<h1>Retail POS Migration Project</h1>
+	<p>Group 02 &ndash; BISY2004 Project Management, Assessment 2</p>
+	<div id="nav">
+		<a href="index.html">Home</a>
+		<a href="charter.html">Charter</a>
+		<a href="scope.html">Scope &amp; WBS</a>
+		<a href="schedule.html">Schedule &amp; Cost</a>
+		<a href="risk.html">Risk</a>
+		<a href="quality.html">Quality &amp; Change</a>
+		<a href="team.html">Team</a>
+		<a class="current" href="monitoring.html">Monitoring</a>
+		<a href="recommendation.html">Recommendation</a>
+	</div>
+</div>
+
+<h2 class="pagetitle">8. Monitoring, Control and Closure</h2>
+
+<h3>Status and variance analysis</h3>
+
+<div class="tablewrap">
+<table>
+	<tr><th>Measure</th><th>Baseline</th><th>Actual</th><th>Variance</th><th>Comment</th></tr>
+	<tr>
+		<td>Schedule (closure date)</td><td>25 September 2026</td><td>25 September 2026</td>
+		<td class="c">0 days</td>
+		<td>All 13 work packages and five milestones closed on their baseline dates</td>
+	</tr>
+	<tr>
+		<td>Cost (total spend)</td><td>$106,986</td><td>Within ceiling</td><td class="c">No overrun</td>
+		<td>CAT-05 contingency drawn on once, for CR-02; the remainder was unspent</td>
+	</tr>
+	<tr>
+		<td>Scope (deliverables)</td><td>13 packages, 5 milestones</td><td>13 packages, 5 milestones</td>
+		<td class="c">0</td>
+		<td>CR-03 was deferred rather than absorbed, so no uncontrolled growth</td>
+	</tr>
+	<tr>
+		<td>Quality (targets met)</td><td>5 targets</td><td>5 targets</td><td class="c">0</td>
+		<td>UAT passed in full and was signed off at M2</td>
+	</tr>
+	<caption>Position at closure, 25 September 2026.</caption>
+</table>
+</div>
+
+<figure>
+	<a href="assets/excel/01_Excel_Schedule_WBS.png">
+		<img src="assets/excel/01_Excel_Schedule_WBS.png"
+			alt="Excel status register showing every work package and milestone marked Done">
+	</a>
+	<figcaption><b>Figure 8.1:</b> The status register at closure. The Status column is the source of the
+	schedule variance figure above: every row reads Done against its baseline start and end
+	dates.</figcaption>
+</figure>
+
+<p>Status was tracked in two places and reconciled between them. The Trello board gave daily movement, the
+register gave the weekly position, and the two were compared at the Friday retrospective. A card could not
+be marked Done on the board without the matching row being updated in the register, which is what kept the
+reported variance honest rather than optimistic.</p>
+
+<p>A zero schedule variance should not be read as &ldquo;nothing went wrong&rdquo;. Three issues were
+raised during execution; the variance is zero because each was absorbed inside its own activity rather
+than allowed to reach the critical path. On a plan with no float that was not luck, it was the reason
+issues were escalated the same day they appeared.</p>
+
+<h3>Issue log and corrective actions</h3>
+
+<div class="tablewrap">
+<table>
+	<tr><th>ID</th><th>Issue</th><th>Raised in</th><th>Owner</th><th>Corrective action</th><th>Status</th></tr>
+	<tr>
+		<td>ISS-01</td>
+		<td>Receipt printer driver mismatch on the substituted terminal model, found during UAT</td>
+		<td>WP 3.3</td><td>Farhan Rohan</td>
+		<td>Driver re-packaged and re-tested the same day. The card returned from Review / Testing to
+			In Progress and closed within 24 hours</td>
+		<td>Closed</td>
+	</tr>
+	<tr>
+		<td>ISS-02</td>
+		<td>Cloud sync latency spikes at two stores during peak-hour simulation</td>
+		<td>WP 4.2</td><td>Zareen Orpa</td>
+		<td>LTE backup gateways deployed under CR-02, funded from contingency. Latency returned inside the
+			two-second target</td>
+		<td>Closed</td>
+	</tr>
+	<tr>
+		<td>ISS-03</td>
+		<td>Two cashiers missed their scheduled training session because of shift cover</td>
+		<td>WP 4.1</td><td>Ishita</td>
+		<td>Catch-up dry-run held before M3, so staff readiness certification stayed complete</td>
+		<td>Closed</td>
+	</tr>
+</table>
+</div>
+
+<p>ISS-02 is risk <a href="risk.html">R1</a> appearing in a milder form &ndash; degraded sync rather than a
+full outage. Because R1 already had a funded response and a reserve behind it, the corrective action was a
+purchase decision inside contingency rather than an escalation, and the critical path never moved.
+ISS-01 traces back the other way, to CR-01: approving a hardware substitution created a re-test obligation,
+and the change log is where that obligation was recorded so that testing did not miss it.</p>
+
+<h3>Closure checklist</h3>
+<ul>
+	<li>Hardware installation sign-offs completed for all five stores.</li>
+	<li>Financial reconciliation completed against categories CAT-01 to CAT-05.</li>
+	<li>Client handover pack signed by the Retail Operations Manager.</li>
+	<li>Legacy system decommissioning approved and the rollback snapshot archived.</li>
+	<li>Trello board archived and project documentation stored in the shared drive.</li>
+	<li>Final review meeting held and lessons learned recorded (WP 5.2).</li>
+</ul>
+
+<h3>Benefits realisation</h3>
+<ul>
+	<li>Checkout is 35% faster than the legacy baseline, measured during UAT.</li>
+	<li>Inventory synchronises in real time across all five pilot stores, removing the overnight batch
+		delay.</li>
+	<li>Manual end-of-shift reconciliation has been eliminated, returning that time to store managers.</li>
+	<li>Trading continues through a fixed-line outage, because of the LTE failover installed under
+		CAT-03 and CR-02.</li>
+</ul>
+
+<h3>Lessons learned</h3>
+
+<div class="tablewrap">
+<table>
+	<tr><th>What happened</th><th>Lesson</th><th>Action for the enterprise rollout</th></tr>
+	<tr>
+		<td>Pre-orders and buffer stock protected milestone M1</td>
+		<td>Procurement risk is cheapest to control before the critical path starts</td>
+		<td>Place hardware orders one full phase ahead of need</td>
+	</tr>
+	<tr>
+		<td>Dual-audit scripts caught schema mismatches before cutover</td>
+		<td>Verification either side of a migration is worth the day it costs</td>
+		<td>Make dual-audit a standard gate rather than a project-specific control</td>
+	</tr>
+	<tr>
+		<td>Dry-run simulations changed staff attitude faster than written guides</td>
+		<td>Rehearsal beats documentation for adoption risk</td>
+		<td>Budget dry-run time into every store wave</td>
+	</tr>
+	<tr>
+		<td>Zero float left no recovery room when ISS-01 and ISS-02 appeared</td>
+		<td>A schedule without float turns every small issue into a deadline threat</td>
+		<td>Carry two to three days of buffer per wave</td>
+	</tr>
+	<tr>
+		<td>One specialist held 35% of all scheduled hours</td>
+		<td>Single-point resource dependency is a schedule risk, not just a workload issue</td>
+		<td>Cross-train the cloud and hardware roles before scaling</td>
+	</tr>
+</table>
+</div>
+
+<p>The project was formally closed on 25 September 2026 following the final review and handover in
+work package 5.2.</p>
+
+<div id="footer">
+	&copy; 2026 Group 02 Retail POS Migration Project | BISY2004 Project Management
+</div>
+
+</div>
+</body>
+</html>

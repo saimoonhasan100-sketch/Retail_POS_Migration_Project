@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scope and WBS - Retail POS Migration Project (Group 02)</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+	<h1>Retail POS Migration Project</h1>
+	<p>Group 02 &ndash; BISY2004 Project Management, Assessment 2</p>
+	<div id="nav">
+		<a href="index.html">Home</a>
+		<a href="charter.html">Charter</a>
+		<a class="current" href="scope.html">Scope &amp; WBS</a>
+		<a href="schedule.html">Schedule &amp; Cost</a>
+		<a href="risk.html">Risk</a>
+		<a href="quality.html">Quality &amp; Change</a>
+		<a href="team.html">Team</a>
+		<a href="monitoring.html">Monitoring</a>
+		<a href="recommendation.html">Recommendation</a>
+	</div>
+</div>
+
+<h2 class="pagetitle">3. Scope and Work Breakdown Structure</h2>
+
+<h3>Scope statement</h3>
+<p>End-to-end cloud migration of point-of-sale systems, transaction databases and network hardware across
+five designated pilot retail locations. The work covers cloud licensing, legacy data auditing and
+migration, on-site terminal installation and wiring, network and security upgrades, user acceptance
+testing, staff training, and two weeks of post-go-live hypercare support, finishing with a signed
+handover to the Retail Operations Manager.</p>
+
+<div class="twocol">
+	<div class="col">
+		<p><b>Deliverables</b></p>
+		<ul>
+			<li>NexisPOS Enterprise Cloud licence (one year, five stores).</li>
+			<li>15 Apex POS TouchTerminals installed and wired.</li>
+			<li>Audited and migrated legacy transaction database.</li>
+			<li>VLAN, router and LTE backup upgrades per store.</li>
+			<li>Signed-off UAT results and certified store staff.</li>
+			<li>Hypercare support and final handover pack.</li>
+		</ul>
+	</div>
+	<div class="col last">
+		<p><b>Exclusions</b></p>
+		<ul>
+			<li>Rollout to non-pilot and franchise stores.</li>
+			<li>Custom software development on the NexisPOS platform.</li>
+			<li>Replacement of back-office ERP or accounting systems.</li>
+			<li>Hardware for stockrooms or warehouse scanning.</li>
+		</ul>
+	</div>
+</div>
+
+<h2>Work breakdown structure</h2>
+
+<p>The project decomposes into five phases, 13 work packages and five deliverable milestones. Every work
+package has one accountable lead, so there is never a question about who reports its progress.</p>
+
+<div class="tablewrap">
+<table>
+	<tr>
+		<th>WBS</th><th>Work package</th><th>Phase</th><th>Lead</th><th>Duration</th>
+	</tr>
+	<tr><td>1.1</td><td>Project Charter &amp; Scope Sign-off</td><td>Governance</td><td>Saimoon Hasan</td><td class="r">3 days</td></tr>
+	<tr><td>1.2</td><td>NexisPOS Cloud Licensing Agreement</td><td>Procurement</td><td>Farhan Rohan</td><td class="r">3 days</td></tr>
+	<tr><td>1.3</td><td>Procurement of Apex POS TouchTerminals</td><td>Procurement</td><td>Zareen Orpa</td><td class="r">3 days</td></tr>
+	<tr><td>M1</td><td>Apex POS Hardware Delivered &amp; Accepted</td><td>Milestone</td><td>Zareen Orpa</td><td class="r">0</td></tr>
+	<tr><td>2.1</td><td>Legacy Data Audit &amp; Schema Mapping</td><td>Data engineering</td><td>Farhan Rohan</td><td class="r">4 days</td></tr>
+	<tr><td>2.2</td><td>NexisPOS Cloud Database Provisioning</td><td>Cloud infrastructure</td><td>Farhan Rohan</td><td class="r">4 days</td></tr>
+	<tr><td>2.3</td><td>Store Network &amp; Security Upgrades (5 stores)</td><td>Security</td><td>Zareen Orpa</td><td class="r">5 days</td></tr>
+	<tr><td>3.1</td><td>On-site Apex POS Terminal Setup &amp; Wiring</td><td>Infrastructure</td><td>Zareen Orpa</td><td class="r">5 days</td></tr>
+	<tr><td>3.2</td><td>Cloud Sync &amp; Migration Execution</td><td>Migration</td><td>Farhan Rohan</td><td class="r">5 days</td></tr>
+	<tr><td>3.3</td><td>Functional &amp; User Acceptance Testing</td><td>Testing and QA</td><td>Farhan &amp; Ishita</td><td class="r">5 days</td></tr>
+	<tr><td>M2</td><td>UAT &amp; Data Migration Sign-off</td><td>Milestone</td><td>Farhan &amp; Saimoon</td><td class="r">0</td></tr>
+	<tr><td>4.1</td><td>Store Manager &amp; Cashier Training (5 stores)</td><td>Training</td><td>Ishita</td><td class="r">5 days</td></tr>
+	<tr><td>4.2</td><td>Dry-Run Operations &amp; Shift Simulations</td><td>Testing</td><td>Ishita</td><td class="r">4 days</td></tr>
+	<tr><td>M3</td><td>Staff Readiness Certification</td><td>Milestone</td><td>Ishita</td><td class="r">0</td></tr>
+	<tr><td>M4</td><td>Pilot Stores Cloud Migration Go-Live</td><td>Milestone</td><td>Farhan &amp; Zareen</td><td class="r">0</td></tr>
+	<tr><td>5.1</td><td>Post Go-Live Support &amp; Hypercare</td><td>Support</td><td>Ishita &amp; Farhan</td><td class="r">6 days</td></tr>
+	<tr><td>5.2</td><td>Project Final Review &amp; Handover</td><td>Closure</td><td>Saimoon Hasan</td><td class="r">2 days</td></tr>
+	<tr><td>M5</td><td>Project Closure Completed</td><td>Final milestone</td><td>Saimoon Hasan</td><td class="r">0</td></tr>
+	<caption>Phases: 1 Governance &amp; Procurement, 2 Data &amp; Infrastructure, 3 Implementation &amp;
+	UAT, 4 Training &amp; Operations, 5 Support &amp; Closure.</caption>
+</table>
+</div>
+
+<figure>
+	<a href="assets/excel/01_Excel_Schedule_WBS.png">
+		<img src="assets/excel/01_Excel_Schedule_WBS.png"
+			alt="Excel worksheet listing every WBS work package with assigned lead, role, phase, status and dates">
+	</a>
+	<figcaption><b>Figure 3.1:</b> WBS and task allocation register, maintained in Excel. Each row carries
+	the assigned lead, role, phase, status and baseline dates used for weekly reporting.</figcaption>
+</figure>
+
+<figure>
+	<a href="assets/diagrams/A2_Group02_WBS_Tree_Diagram.png">
+		<img src="assets/diagrams/A2_Group02_WBS_Tree_Diagram.png"
+			alt="WBS tree diagram showing the project root decomposed into phase 3 work packages and milestone M2">
+	</a>
+	<figcaption><b>Figure 3.2:</b> WBS tree decomposition, drawn in diagrams.net, showing Phase 3
+	(Implementation &amp; UAT) broken into work packages 3.1 to 3.3 and the M2 sign-off gate.</figcaption>
+</figure>
+
+<h3>How the WBS holds the project together</h3>
+<p>The same identifiers are reused in every other artefact. Work package 3.1 is task 3.1 in the
+<a href="schedule.html">ProjectLibre schedule</a> and the card titled &ldquo;3.1 On-site Apex POS Terminal
+Setup &amp; Wiring&rdquo; on the <a href="quality.html">Trello board</a>. That shared numbering is what
+makes a status report checkable: any card on the board can be traced back to a scheduled activity with a
+duration, a dependency and a named owner, and anything that cannot be traced that way is not project
+work.</p>
+
+<h2>Scope control</h2>
+<p>Scope was baselined at charter sign-off (WP 1.1) and frozen for the 28-day execution window. Variations
+followed one route:</p>
+
+<ol>
+	<li><b>Raise.</b> The change is logged as a Trello card in the Backlog list with a CR reference and the
+		requesting stakeholder named.</li>
+	<li><b>Assess.</b> The Project Manager assesses cost, schedule and risk impact against the baseline and
+		the $12,686 contingency.</li>
+	<li><b>Decide.</b> Changes inside contingency are approved by the Project Manager. Anything touching the
+		budget ceiling or the 25 September deadline escalates to the Steering Committee.</li>
+	<li><b>Record.</b> Approved changes update the WBS register, the schedule and the budget log. Rejected
+		ones are written into the enterprise rollout backlog rather than dropped.</li>
+</ol>
+
+<p>Because the critical path carries zero float, the standing rule for the pilot was that no change adding
+duration to a critical activity could be approved inside the execution window. The
+<a href="quality.html">change log</a> shows that rule being applied: two changes approved, one deferred
+for exactly that reason.</p>
+
+<div id="footer">
+	&copy; 2026 Group 02 Retail POS Migration Project | BISY2004 Project Management
+</div>
+
+</div>
+</body>
+</html>
